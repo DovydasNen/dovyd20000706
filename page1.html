@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 1</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+
+    .top-left-img {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      width: 420px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      color: white;
+      font-family: monospace;
+      font-size: 14px;
+      text-decoration: none;
+      letter-spacing: 1px;
+      background-color: transparent;
+      padding: 4px 8px;
+      transition: opacity 0.2s ease;
+      z-index: 999;
+    }
+
+    .back-btn:hover {
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-btn">←  back</a>
+  <img src="assets/IMG_4453.jpeg" class="top-left-img" />
+</body>
+</html>

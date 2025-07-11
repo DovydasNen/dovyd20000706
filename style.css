@@ -1,0 +1,40 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: monospace;
+}
+
+.icon-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* All icon links are absolutely positioned */
+.icon {
+  position: absolute;
+  width: 48px;
+  display: block;
+  transition: transform 0.3s ease;
+  image-rendering: pixelated;
+}
+
+.icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Individual icon positions */
+.icon1 { top: 25%; left: 20%; }
+.icon2 { top: 35%; left: 55%; }
+.icon3 { top: 55%; left: 35%; }
+.icon4 { top: 65%; left: 60%; }
