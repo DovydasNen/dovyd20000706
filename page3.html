@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>contact</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 40px;
       background-color: white;
@@ -12,6 +12,14 @@
       font-family: 'Menlo', monospace;
       font-size: 14px;
       line-height: 2;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     .back-btn {
@@ -25,22 +33,26 @@
     }
 
     .back-btn:hover {
+      text-decoration: underline;
       opacity: 0.6;
     }
 
-    .profile-img {
-      position: absolute;
-      top: 40px;
-      right: 40px;
-      max-width: 300px;
-      height: auto;
-      border-radius: 4px;
-      opacity: 0.95;
+    .main-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: 80px auto 0 auto;
+      gap: 60px;
+    }
+
+    .contact-left {
+      max-width: 480px;
+      flex: 1;
     }
 
     .contact-block {
-      margin-top: 60px;
-      max-width: 500px;
+      margin-bottom: 60px;
     }
 
     .label {
@@ -59,31 +71,42 @@
     a:hover {
       text-decoration: underline;
     }
+
+    .profile-img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 4px;
+      opacity: 0.95;
+    }
   </style>
 </head>
 <body>
   <a href="index.html" class="back-btn">←  back</a>
 
-  <img src="assets/dovydas.PNG" alt="Dovydas" class="profile-img" />
+  <div class="main-content">
+    <div class="contact-left">
+      <div class="contact-block">
+        <div class="label">email</div>
+        <a href="mailto:dovydas.nenartavicius@gmail.com">dovydas.nenartavicius@gmail.com</a>
+      </div>
 
-  <div class="contact-block">
-    <div class="label">email</div>
-    <a href="mailto:dovydas.nenartavicius@gmail.com">dovydas.nenartavicius@gmail.com</a>
-  </div>
+      <div class="contact-block">
+        <div class="label">instagram</div>
+        <a href="https://instagram.com/dovydasnen" target="_blank">@dovydasnen</a>
+      </div>
 
-  <div class="contact-block">
-    <div class="label">instagram</div>
-    <a href="https://instagram.com/dovydasnen" target="_blank">@dovydasnen</a>
-  </div>
+      <div class="contact-block">
+        <div class="label">linkedin</div>
+        <a href="https://www.linkedin.com/in/dovydas-nenartavičius/" target="_blank">/in/dovydas-nenartavičius</a>
+      </div>
 
-  <div class="contact-block">
-    <div class="label">linkedin</div>
-    <a href="https://www.linkedin.com/in/dovydas-nenartavičius/" target="_blank">/in/dovydas-nenartavičius</a>
-  </div>
+      <div class="contact-block">
+        <div class="label">current location</div>
+        <span>Vilnius, Lithuania</span>
+      </div>
+    </div>
 
-  <div class="contact-block">
-    <div class="label">current location</div>
-    <span>Vilnius, Lithuania</span>
+    <img src="assets/dovydas.PNG" alt="Dovydas" class="profile-img" />
   </div>
 </body>
 </html>
